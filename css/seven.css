@@ -1,0 +1,247 @@
+/* Start Variables */
+:root {
+  --main-color: rgb(70, 172, 70);
+}
+
+/* End Variables */
+/* Start Global Rules */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Jomhuria&family=Open+Sans:wght@300;400;700&family=Roboto:ital,wght@0,500;0,900;1,300&family=Work+Sans:ital,wght@0,800;1,500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-color);
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+/* Start heading */
+.heading .container {
+  display: flex;
+  justify-content: space-between;
+}
+.heading .container img {
+  width: 200px;
+  animation: logoanimation 1s ease-out;
+}
+@keyframes logoanimation {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.heading .container ul {
+  display: flex;
+  padding: 30px;
+}
+.heading .container ul li {
+  margin-right: 15px;
+}
+.heading .container ul li a {
+  text-decoration: none;
+  color: white;
+}
+.heading .container ul li a:hover {
+  color: yellow;
+}
+@media (max-width: 769px) {
+  .heading .container {
+    align-items: center;
+    flex-direction: column;
+  }
+  .heading .container img {
+    width: 100px;
+  }
+}
+/* End heading */
+/* Start landing */
+.landing .container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+}
+.landing .container::before {
+  content: "";
+  position: absolute;
+  background-color: yellow;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  top: 145px;
+  right: -145px;
+  z-index: -1;
+}
+.landing .container::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  top: -345px;
+  left: -239px;
+  z-index: -1;
+}
+.landing .text h2 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 70px;
+}
+.landing .text p {
+  line-height: 1.8;
+  padding: 15px;
+  width: 80%;
+}
+.landing .text button {
+  padding: 10px 15px;
+  margin: 20px;
+  border: none;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.landing .text button:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.landing .image {
+  display: flex;
+}
+.landing .image img {
+  width: 200px;
+  animation: landanimation 1s ease-out;
+}
+@keyframes landanimation {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.landing .image .icons {
+  margin-left: 30px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.landing .image .icons i {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+@media (max-width: 769px) {
+  .landing .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing .text {
+    text-align: center;
+  }
+  .landing .text p {
+    width: 100%;
+  }
+  .landing .image img {
+    width: 150px;
+  }
+  .landing .container::before {
+    content: "";
+    position: absolute;
+    background-color: yellow;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+  top: 520px;
+    right: 160px;
+    z-index: -1;
+  }
+  .landing .container::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: -310px;
+    left: -170px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 667px){
+  .landing .container::before {
+width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  top: 617px;
+  right: 81px;
+  }
+ .landing .container::after {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            top: -324px;
+            left: -170px;}
+}
+@media (max-width: 667px) {
+  .landing .container::before {
+    width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      top: 550px;
+      right: 184px;
+  }}
+       
+       
+/* End landing */
